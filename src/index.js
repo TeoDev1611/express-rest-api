@@ -9,6 +9,9 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Middlewars
 app.use(logger);
+// Body parser json
+app.use(express.json());
+app.use(express.urlencoded({extended:false}));
 
 //ROUTING APP
 app.use("/api/members", require("./routes/api/members"));
