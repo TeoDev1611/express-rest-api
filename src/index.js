@@ -1,19 +1,23 @@
+// Modules
 const express = require("express");
 const app = express();
-const PORT = 3000 || process.env.PORT;
 const path = require("path");
-const logger = require("./middlewares/logger");
 
-//STATICS
+// My variables of files
+const logger = require("./middlewares/logger");
+const PORT = 3000 || process.env.PORT;
+
+//Statics files
 app.use(express.static(path.join(__dirname, "public")));
 
-// Middlewars
+// My Middlewar
 app.use(logger);
+
 // Body parser json
 app.use(express.json());
-app.use(express.urlencoded({extended:false}));
+app.use(express.urlencoded({ extended: false }));
 
-//ROUTING APP
+//Members Route
 app.use("/api/members", require("./routes/api/members"));
 
 //Base route

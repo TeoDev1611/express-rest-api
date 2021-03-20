@@ -1,6 +1,6 @@
-const dayjs = require('dayjs')
+const dayjs = require("dayjs");
 
-// Middlewars
+// Middlewar logger
 const logger = (req, res, next) => {
   console.log(
     `${req.protocol}://${req.get("host")}${
@@ -10,4 +10,5 @@ const logger = (req, res, next) => {
   next();
 };
 
+// Export the logger 
 module.exports = logger;
