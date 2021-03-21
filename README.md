@@ -1,7 +1,5 @@
 # A simple Rest API with Express
 
-## NO FINISHED 
-
 ### DESCRIPTION
 
 The API have 2 routes one a welcome route in "/" and other route in "api/members" he have some HTTP requests
